@@ -24,7 +24,7 @@ import {
 
 const width = Dimensions.get('window').width; // 全屏宽高
 const height = Dimensions.get('window').height; // 全屏宽高
-const IMG = require('../../img/mine/lock.png');
+const IMG = require('../../img/mine/e1.png');
 
 const X_WIDTH = 375;
 const X_HEIGHT = 812;
@@ -76,7 +76,7 @@ class Register extends Component {
         },
         headerStyle: {
             height: isIphoneX() ? 65 : 45,
-            backgroundColor: '#292929',
+            backgroundColor: '#D31F26',
             paddingTop: isIphoneX() ? 20 : 0,
             elevation: 0,
         }
@@ -340,8 +340,8 @@ class Register extends Component {
                             <Image
                                 source={IMG}
                                 style={{
-                                    width: 70,
-                                    height: 80
+                                    width: 100,
+                                    height: 70
                                 }}
                             />
                             <View>
@@ -398,7 +398,7 @@ class Register extends Component {
                                                 <TouchableOpacity
                                                     style={{
                                                         width: '80%',
-                                                        backgroundColor: '#333',
+                                                        backgroundColor: '#F8260F',
                                                         alignItems: 'center',
                                                         justifyContent: 'space-around',
                                                         height: 55,
@@ -440,7 +440,7 @@ class Register extends Component {
                                                         // onChangeText={this.changeCode}
                                                         underlineColorAndroid="transparent"
                                                         style={{
-                                                            borderColor: '#EDF0F3',
+                                                            backgroundColor: '#F8260F',
                                                             borderWidth: 1,
                                                             borderRadius: 30,
                                                             height: 55,
@@ -474,7 +474,7 @@ class Register extends Component {
                                         <TouchableOpacity
                                             style={{
                                                 width: '80%',
-                                                backgroundColor: '#333',
+                                                backgroundColor: '#F8260F',
                                                 alignItems: 'center',
                                                 justifyContent: 'space-around',
                                                 height: 55,
@@ -550,7 +550,7 @@ class Register extends Component {
                                         <TouchableOpacity
                                             style={{
                                                 width: '80%',
-                                                backgroundColor: '#333',
+                                                backgroundColor: '#F8260F',
                                                 alignItems: 'center',
                                                 justifyContent: 'space-around',
                                                 height: 55,

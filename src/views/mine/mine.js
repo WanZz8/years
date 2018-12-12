@@ -40,7 +40,7 @@ class Mine extends Component {
         headerLeft: null,
         headerStyle: {
             height: 10,
-            backgroundColor: '#494949',
+            backgroundColor: '#F8260F',
             paddingTop: 10,
             elevation: 0,
         }

@@ -68,7 +68,7 @@ class Share extends Component {
         },
         headerStyle: {
             height: isIphoneX() ? 65 : 45,
-            backgroundColor: '#292929',
+            backgroundColor: '#D31F26',
             paddingTop: isIphoneX() ? 20 : 0,
             elevation: 0,
         }

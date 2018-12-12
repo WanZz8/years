@@ -156,7 +156,7 @@ class Header extends Component {
 
 const Tradeheaderstyles = StyleSheet.create({
     container: {
-        backgroundColor: '#000',
+        backgroundColor: '#D31F26',
         height: isIphoneX() ? 68 : 55,
         flexDirection: 'column',
         alignItems: 'center',
