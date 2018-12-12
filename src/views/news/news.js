@@ -201,7 +201,7 @@ const NewsStyle = StyleSheet.create({
     headerBar: {
         flexDirection: 'row',
         height: 44,
-        backgroundColor: '#D31F26',
+        backgroundColor: '#E3C691',
         alignItems: 'center',
         justifyContent: 'center'
     },
