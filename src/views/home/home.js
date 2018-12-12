@@ -464,7 +464,15 @@ class HomePage extends Component {
                                             color="#fff"
                                         />
                                     </TouchableOpacity>
-                                    <TouchableOpacity style={HomeStyles.noticeContent}>
+                                    <TouchableOpacity
+                                        style={HomeStyles.noticeContent}
+                                        onPress={
+                                            () => {
+                                                this.props.navigation.navigate(
+                                                    'Login'
+                                                );
+                                            }}
+                                    >
                                         <Text style={{
                                             color: '#FFF',
                                             fontSize: 18,
