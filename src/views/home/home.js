@@ -258,7 +258,7 @@ class HomePage extends Component {
                                 onPress={
                                     () => {
                                         this.props.navigation.navigate(
-                                            'Share'
+                                            'Optional'
                                         );
                                     }}
                                 style={{
