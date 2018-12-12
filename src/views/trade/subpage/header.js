@@ -206,7 +206,7 @@ const Tradeheaderstyles = StyleSheet.create({
     },
     btnStyle: {
         position: 'absolute',
-        backgroundColor: '#25231D',
+        backgroundColor: '#D31F26',
         right: 10,
         alignSelf: 'center',
         height: isIphoneX() ? 64 : 55,

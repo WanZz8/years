@@ -30,7 +30,8 @@ const IMG = {
     account: require('../../img/mine/account.png'),
     setting: require('../../img/mine/setting.png'),
     coin: require('../../img/mine/coinAdd.png'),
-    person: require('../../img/mine/boy.png')
+    person: require('../../img/mine/boy.png'),
+    ban: require('../../img/home/Bitmap.png')
 };
 
 @inject('CacheStore')
@@ -94,7 +95,7 @@ class Mine extends Component {
                         {/* backgroundColor="transparent" */}
                         {/* translucent */}
                         {/* /> */}
-                        <ImageBackground style={MineStyles.swiperContainer} source={IMG.personBg}>
+                        <ImageBackground style={MineStyles.swiperContainer} source={IMG.ban}>
                             <TouchableOpacity
                                 style={MineStyles.viewImg}
                                 onPress={
