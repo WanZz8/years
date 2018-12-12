@@ -72,6 +72,7 @@ class HomePage extends Component {
     }
 
     componentWillUnmount() {
+        console.log('销毁');
         // if (Platform.OS === 'android') {
         //     BackHandler.removeEventListener('hardwareBackPress', this.onBackAndroid);
         // }
