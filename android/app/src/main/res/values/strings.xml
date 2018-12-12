@@ -1,0 +1,6 @@
+<resources>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">pSRnX5NfTHT948v4kSoEcJMLoS0yHkqh8gxRQ</string>
+    <string name="app_name">东方期货投资宝</string>
+    <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true">ENABLE_IN_JS</string>
+    <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true">ASK_JAVASCRIPT</string>
+</resources>
