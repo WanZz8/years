@@ -44,7 +44,7 @@ class UserInfo extends Component {
                     width: 25
                 }}
             >
-                <Icons name="ios-arrow-back" size={25} color="#999" />
+                <Icons name="ios-arrow-back" size={25} color="#FFF" />
             </TouchableOpacity>),
         headerRight: (
             <View>
@@ -61,7 +61,7 @@ class UserInfo extends Component {
             flex: 1,
             textAlign: 'center',
             fontSize: 18,
-            color: '#000',
+            color: '#FFF',
             fontWeight: 'bold'
         },
         headerStyle: {
