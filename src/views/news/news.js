@@ -65,7 +65,7 @@ class News extends Component {
         },
         headerStyle: {
             height: isIphoneX() ? 65 : 45,
-            backgroundColor: '#292929',
+            backgroundColor: '#F8260F',
             paddingTop: isIphoneX() ? 20 : 0,
             elevation: 0,
         },
@@ -201,7 +201,7 @@ const NewsStyle = StyleSheet.create({
     headerBar: {
         flexDirection: 'row',
         height: 44,
-        backgroundColor: '#e99a56',
+        backgroundColor: '#D31F26',
         alignItems: 'center',
         justifyContent: 'center'
     },

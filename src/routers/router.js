@@ -52,10 +52,11 @@ const Tab = TabNavigator(
                 {
                     tabBarLabel: '交易',
                     tabBarIcon: ({ focused, tintColor }) => (
-                        <Icons
-                            name="logo-codepen"
-                            size={30}
-                            color={tintColor}
+                        <TabBarItem
+                            tintColor={tintColor}
+                            focused={focused}
+                            selectedImage={require('../img/home/a2.png')}
+                            normalImage={require('../img/home/d1.png')}
                         />
                     )
                 }
@@ -103,7 +104,7 @@ const Tab = TabNavigator(
         animationEnabled: true,
         lazy: true,
         tabBarOptions: {
-            activeTintColor: '#AB956D',
+            activeTintColor: '#E73D29',
             inactiveTintColor: '#979797',
             labelStyle: {
                 fontSize: 12, // 文字大小

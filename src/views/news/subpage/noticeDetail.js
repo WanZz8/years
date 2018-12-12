@@ -58,7 +58,7 @@ class NoticeDetails extends Component {
         },
         headerStyle: {
             height: isIphoneX() ? 65 : 45,
-            backgroundColor: '#292929',
+            backgroundColor: '#E99A56',
             paddingTop: isIphoneX() ? 20 : 0,
             elevation: 0,
         },
