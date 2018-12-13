@@ -141,7 +141,7 @@ class AllOptional extends Component {
                                     height: 40,
                                     borderRadius: 30
                                 }}
-                                onPress={this.login}
+                                // onPress={this.login}
                             >
                                 <Text style={{
                                     color: '#fff',

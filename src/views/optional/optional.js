@@ -143,7 +143,7 @@ class Optional extends Component {
                                 }}
                                 onPress={() => {
                                     this.props.navigation.navigate(
-                                        'Login',
+                                        'AllOptional',
                                         // {
                                         //     refresh() {
                                         //         that.props.refresh();
