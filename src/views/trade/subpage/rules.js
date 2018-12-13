@@ -306,8 +306,8 @@ class Rules extends Component {
                                 }}
                                 >
                                     <Text style={{ fontSize: 16 }}>【买入时间】</Text>
-                                    <Text style={{ fontSize: 14 }}>上午06：00：00 - 次04：15:00</Text>
-                                    <Text style={{ fontSize: 14 }}>上午04：30：00 - 次04：50:00</Text>
+                                    <Text style={{ fontSize: 14 }}>上午06:00:00  -  次04:15:00</Text>
+                                    <Text style={{ fontSize: 14 }}>上午04:30:00  -  次04:50:00</Text>
                                 </View>
                                 <View style={{
                                     flex: 1,
@@ -316,8 +316,8 @@ class Rules extends Component {
                                 }}
                                 >
                                     <Text style={{ fontSize: 16 }}>【买出时间】</Text>
-                                    <Text style={{ fontSize: 14 }}>上午06：00：00 - 次04：15:00</Text>
-                                    <Text style={{ fontSize: 14 }}>上午04：30：00 - 次04：50:00</Text>
+                                    <Text style={{ fontSize: 14 }}>上午06:00:00  -  次04:15:00</Text>
+                                    <Text style={{ fontSize: 14 }}>上午04:30:00  -  次04:50:00</Text>
                                 </View>
                             </View>
                         </View>
@@ -442,6 +442,6 @@ const RulesStyles = StyleSheet.create({
     },
     infoContent: {
         backgroundColor: '#fff',
-        padding: 10
+        padding: 13
     },
 });
