@@ -35,9 +35,9 @@ function isIphoneX() {
 
 @inject('NoticeStore')
 @observer
-class Optional extends Component {
+class AllOptional extends Component {
     static navigationOptions =({ navigation }) => ({
-        title: '我的自选',
+        title: '添加自选',
         headerLeft: (
             <TouchableOpacity
                 onPress={() => {
@@ -101,9 +101,9 @@ class Optional extends Component {
 
     render() {
         return (
-            <SafeAreaView style={OptionalStyles.root}>
+            <SafeAreaView style={AllOptionalStyles.root}>
                 <ScrollView>
-                    <View style={OptionalStyles.mainContainer}>
+                    <View style={AllOptionalStyles.mainContainer}>
                         <Image source={IMG} />
                         <View style={{
                             marginTop: 20
@@ -141,16 +141,7 @@ class Optional extends Component {
                                     height: 40,
                                     borderRadius: 30
                                 }}
-                                onPress={() => {
-                                    this.props.navigation.navigate(
-                                        'Login',
-                                        // {
-                                        //     refresh() {
-                                        //         that.props.refresh();
-                                        //     }
-                                        // }
-                                    );
-                                }}
+                                onPress={this.login}
                             >
                                 <Text style={{
                                     color: '#fff',
@@ -169,7 +160,7 @@ class Optional extends Component {
     }
 }
 
-const OptionalStyles = StyleSheet.create({
+const AllOptionalStyles = StyleSheet.create({
     root: {
         flex: 1,
         width,
@@ -205,4 +196,4 @@ const OptionalStyles = StyleSheet.create({
     },
 });
 
-export default Optional;
+export default AllOptional;

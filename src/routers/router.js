@@ -8,7 +8,8 @@ import NoticeDetails from '../views/news/subpage/noticeDetail'; // 资讯直播
 import Sort from '../views/sort/sort'; // 排行榜
 import Share from '../views/share/share'; // 推荐好友
 import Server from '../views/server/server'; // 在线客服
-import Optional from '../views/optional/optional'; // 在线客服
+import Optional from '../views/optional/optional'; // 我的自选
+import AllOptional from '../views/all_optional/allOptionals'; // 我的自选
 
 import TradePage from '../views/trade/trade';
 import Rules from '../views/trade/subpage/rules';
@@ -126,6 +127,7 @@ const RootNavigator = StackNavigator(
         Share: { screen: Share },
         Order: { screen: Order },
         Position: { screen: Position },
+        AllOptional: { screen: AllOptional },
         Server: { screen: Server },
         Optional: { screen: Optional },
         Login: { screen: Login },
