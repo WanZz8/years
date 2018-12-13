@@ -9,7 +9,8 @@ import {
     StyleSheet,
     Dimensions,
     Image,
-    Platform
+    Platform,
+    AsyncStorage
 } from 'react-native';
 import { observer, inject } from 'mobx-react/native';
 // import { computed } from 'mobx';
@@ -80,79 +81,187 @@ class AllOptional extends Component {
         super(props);
         this.state = {
             selectedIndex: -1,
+            arr: [],
+            selfArray: '',
         };
     }
 
     componentDidMount() {
-        this.props.NoticeStore.getNoticeContent();
+        const { params, data } = this.props.navigation.state.params;
+        this.setState({
+            arr: data
+        });
+        this.getSelf();
     }
 
-    handleSwitch(key) {
-        if (this.state.selectedIndex === key) {
-            this.setState({
-                selectedIndex: -1
-            });
+    async getSelf() {
+        const aryStr = await AsyncStorage.getItem('self');
+        // console.log(aryStr);
+        const ary = aryStr && aryStr.length ? JSON.parse(aryStr) : [];
+        this.setState({
+            selfArray: ary
+        });
+    }
+
+    // 添加取消
+    addOrCancel(key) {
+        const arr = this.state.selfArray;
+        if (arr.indexOf(key) !== -1) {
+            const index = arr.indexOf(key);
+            if (index > -1) {
+                arr.splice(index, 1);
+            }
         } else {
-            this.setState({
-                selectedIndex: key
-            });
+            arr.push(key);
         }
+        Alert.alert('提示', '操作成功');
+        this.setState({
+            selfArray: arr
+        });
+        // let newArr  = this.state.selfArray.filter((item)=>{
+        //     return arr.indexOf(item.code) !== -1
+        // });
+        AsyncStorage.setItem('self', JSON.stringify(arr));
+        console.log(arr);
     }
 
     render() {
         return (
             <SafeAreaView style={AllOptionalStyles.root}>
                 <ScrollView>
-                    <View style={AllOptionalStyles.mainContainer}>
-                        <Image source={IMG} />
-                        <View style={{
-                            marginTop: 20
-                        }}
+                    <View style={[AllOptionalStyles.tabContent]}>
+                        <ScrollView
+                            directionalLockEnabled
+                            showsHorizontalScrollIndicator={false}
+                            contentContainerStyle={AllOptionalStyles.ScrollWrapper}
                         >
-                            <Text style={{
-                                fontSize: 18
-                            }}
-                            >
-                                您还有添加自选哦
-                            </Text>
-                            <Text style={{
-                                marginTop: 10,
-                                fontSize: 18,
-                                paddingHorizontal: 25
-                            }}
-                            >
-                                快去添加吧
-                            </Text>
-                        </View>
-                        <View
-                            style={{
-                                width,
-                                alignItems: 'center',
-                                height: 40,
-                                marginTop: 20
-                            }}
-                        >
-                            <TouchableOpacity
-                                style={{
-                                    width: '55%',
-                                    backgroundColor: '#F8260F',
-                                    alignItems: 'center',
-                                    justifyContent: 'space-around',
-                                    height: 40,
-                                    borderRadius: 30
-                                }}
-                                // onPress={this.login}
-                            >
-                                <Text style={{
-                                    color: '#fff',
-                                    fontSize: 18,
-                                    fontWeight: 'bold',
-                                }}
-                                >
-                                    添加自选
-                                </Text>
-                            </TouchableOpacity>
-                        </View>
+                            {this.state.arr.map((item, idx) => {
+                                const bg1 = !item.price ? 'rgba(247, 197, 182, 0.2)'
+                                    : item.isUp ? 'rgba(247, 197, 182, 0.2)'
+                                        : 'rgba(1, 173, 138, 0.07)';
+
+                                const priceColor = !item.price ? '#F7C5B6'
+                                    : item.isUp ? '#E84209' : '#009900';
+
+                                const svgBg = !item.price
+                                    ? '#F7C5B6' : item.isUp
+                                        ? require('../../img/optional/up.png')
+                                        : require('../../img/optional/down.png');
+
+                                return (
+                                    <View style={[AllOptionalStyles.cellRt]} key={idx}>
+                                        <View
+                                            activeOpacity={1}
+                                            style={[AllOptionalStyles.itemContent,
+                                                { backgroundColor: bg1 }]}
+                                            onPress={() => {
+                                            }}
+                                        >
+                                            <View style={{ justifyContent: 'space-around' }}>
+                                                <Text style={{ fontSize: 15 }}>{item.name}</Text>
+                                                <Text style={[{
+                                                    fontSize: 20,
+                                                    marginTop: 5,
+                                                    color: priceColor
+                                                }]}
+                                                >
+                                                    {!item.open && item.price ? item.price : '休市'}
+                                                </Text>
+                                            </View>
+                                            <View style={{ justifyContent: 'space-around' }}>
+                                                <View />
+                                                <View style={{
+                                                    flexDirection: 'row',
+                                                    marginTop: 20,
+                                                    justifyContent: 'space-around'
+                                                }}
+                                                >
+                                                    <Text style={{
+                                                        fontSize: 15,
+                                                        color: priceColor,
+                                                        marginRight: 10
+                                                    }}
+                                                    >
+                                                        {item.rate ? item.rate : ''}
+                                                    </Text>
+                                                    <Text style={{
+                                                        fontSize: 15,
+                                                        color: priceColor,
+                                                        marginRight: 10
+                                                    }}
+                                                    >
+                                                        {item.rate ? item.rate : ''}
+                                                    </Text>
+                                                    {item.rate
+                                                        ? (
+                                                            <Image
+                                                                source={svgBg}
+                                                                style={{
+                                                                    width: 15,
+                                                                    height: 15,
+                                                                    top: 5
+                                                                }}
+                                                            />
+                                                        )
+                                                        : (
+                                                            <Text style={{
+                                                                width: 130,
+                                                                height: 15,
+                                                                top: 5
+                                                            }}
+                                                            />
+                                                        )}
+                                                </View>
+                                            </View>
+                                            <View style={{
+                                                flexDirection: 'row',
+                                                justifyContent: 'space-around',
+                                                marginTop: 20
+                                            }}
+                                            >
+                                                <Text style={{ fontSize: 16, marginRight: 5 }}>持仓</Text>
+                                                <Text style={{
+                                                    fontSize: 17,
+                                                    fontWeight: 'bold',
+                                                    color: '#B62A20'
+                                                }}
+                                                >
+                                                    0
+
+                                                </Text>
+                                            </View>
+                                            <TouchableOpacity
+                                                onPress={() => {
+                                                    this.addOrCancel(item.code);
+                                                }}
+                                            >
+                                                <View style={{
+                                                    backgroundColor:
+                                                        this.state.selfArray.indexOf(item.code) === -1
+                                                            ? '#CD3A3C' : '#00B38F',
+                                                    width: 43,
+                                                    height: 36,
+                                                    justifyContent: 'space-around',
+                                                    alignItems: 'center',
+                                                    borderRadius: 4
+                                                }}
+                                                >
+                                                    <Text style={{
+                                                        fontSize: 16,
+                                                        color: '#fff',
+                                                        fontWeight: 'bold'
+                                                    }}
+                                                    >
+                                                        {this.state.selfArray.indexOf(item.code) === -1
+                                                            ? '添加' : '取消'}
+                                                    </Text>
+                                                </View>
+                                            </TouchableOpacity>
+                                        </View>
+                                    </View>
+                                );
+                            })}
+                        </ScrollView>
                     </View>
                 </ScrollView>
             </SafeAreaView>
@@ -193,6 +302,30 @@ const AllOptionalStyles = StyleSheet.create({
     IMGPNG: {
         width: 30,
         height: 30
+    },
+    tabContent: {
+        width,
+        backgroundColor: '#fff',
+        paddingVertical: 5,
+        marginVertical: 10,
+        flex: 1
+    },
+    ScrollWrapper: {
+        width,
+        backgroundColor: '#fff'
+    },
+    cellRt: {
+        width,
+        height: 70,
+    },
+    itemContent: {
+        width,
+        flexDirection: 'row',
+        paddingVertical: 2,
+        height: 60,
+        alignItems: 'center',
+        justifyContent: 'space-around'
+
     },
 });
 

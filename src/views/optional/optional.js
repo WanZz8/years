@@ -9,7 +9,7 @@ import {
     StyleSheet,
     Dimensions,
     Image,
-    Platform
+    Platform, AsyncStorage
 } from 'react-native';
 import { observer, inject } from 'mobx-react/native';
 // import { computed } from 'mobx';
@@ -80,11 +80,15 @@ class Optional extends Component {
         super(props);
         this.state = {
             selectedIndex: -1,
+            selfArray: []
         };
     }
 
     componentDidMount() {
-        this.props.NoticeStore.getNoticeContent();
+        const { params, data } = this.props.navigation.state.params;
+        // console.log(params);
+        // console.log(data);
+        this.getSelf();
     }
 
     handleSwitch(key) {
@@ -99,7 +103,18 @@ class Optional extends Component {
         }
     }
 
+    async getSelf() {
+        const aryStr = await AsyncStorage.getItem('self');
+        // console.log(aryStr);
+        const ary = aryStr && aryStr.length ? JSON.parse(aryStr) : [];
+        this.setState({
+            selfArray: ary
+        });
+        console.log(ary);
+    }
+
     render() {
+        const { params, data } = this.props.navigation.state.params;
         return (
             <SafeAreaView style={OptionalStyles.root}>
                 <ScrollView>
@@ -143,7 +158,7 @@ class Optional extends Component {
                                 }}
                                 onPress={() => {
                                     this.props.navigation.navigate(
-                                        'AllOptional',
+                                        'AllOptional', { data }
                                         // {
                                         //     refresh() {
                                         //         that.props.refresh();
