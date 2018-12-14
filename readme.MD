@@ -1,9 +1,18 @@
+
+
+![Main](./screenshot/Main.png)
+![Trade](./screenshot/trade.png)
+![Notice](./screenshot/notice.png)
+![Mine](./screenshot/Mine.png)
+
 # 库文件
 ### 安装react-native  
     npm install react-native-cli -g  
 
 # 初始化
     react-native init 项目名
+    
+    
 
 # 依赖  
 
