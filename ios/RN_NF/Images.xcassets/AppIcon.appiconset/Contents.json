@@ -3,55 +3,55 @@
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "1024_40.png",
+      "filename" : "jymeitu_1.png",
       "scale" : "2x"
     },
     {
       "size" : "20x20",
       "idiom" : "iphone",
-      "filename" : "1024_60-1.png",
+      "filename" : "jymeitu_3.png",
       "scale" : "3x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "1024_58.png",
+      "filename" : "lymeitu_2.png",
       "scale" : "2x"
     },
     {
       "size" : "29x29",
       "idiom" : "iphone",
-      "filename" : "1024_87.png",
+      "filename" : "jymeitu_4.png",
       "scale" : "3x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "1024_80-1.png",
+      "filename" : "jymeitu_5.png",
       "scale" : "2x"
     },
     {
       "size" : "40x40",
       "idiom" : "iphone",
-      "filename" : "1024_120-2.png",
+      "filename" : "jymeitu_6.png",
       "scale" : "3x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "1024_120.png",
+      "filename" : "jymeitu_7.png",
       "scale" : "2x"
     },
     {
       "size" : "60x60",
       "idiom" : "iphone",
-      "filename" : "1024_180.png",
+      "filename" : "jymeitu_8.png",
       "scale" : "3x"
     },
     {
       "size" : "1024x1024",
       "idiom" : "ios-marketing",
-      "filename" : "1024_直角.png",
+      "filename" : "jy.png",
       "scale" : "1x"
     }
   ],

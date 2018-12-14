@@ -108,7 +108,9 @@ class AllOptional extends Component {
         const arr = this.state.selfArray;
         if (arr.indexOf(key) !== -1) {
             const index = arr.indexOf(key);
+            console.log(index);
             if (index > -1) {
+                console.log(arr);
                 arr.splice(index, 1);
             }
         } else {

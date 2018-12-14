@@ -4,7 +4,10 @@ import {
     Text,
     View,
     Image,
-    Dimensions, TouchableOpacity, Platform
+    Dimensions,
+    TouchableOpacity,
+    Platform,
+    AsyncStorage
 } from 'react-native';
 import Icons from 'react-native-vector-icons/Ionicons';
 

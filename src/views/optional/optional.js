@@ -9,7 +9,8 @@ import {
     StyleSheet,
     Dimensions,
     Image,
-    Platform, AsyncStorage
+    Platform,
+    AsyncStorage
 } from 'react-native';
 import { observer, inject } from 'mobx-react/native';
 // import { computed } from 'mobx';
@@ -87,7 +88,7 @@ class Optional extends Component {
     componentDidMount() {
         const { params, data } = this.props.navigation.state.params;
         // console.log(params);
-        // console.log(data);
+        console.log(data);
         this.getSelf();
     }
 
@@ -105,12 +106,16 @@ class Optional extends Component {
 
     async getSelf() {
         const aryStr = await AsyncStorage.getItem('self');
-        // console.log(aryStr);
+        console.log(aryStr);
         const ary = aryStr && aryStr.length ? JSON.parse(aryStr) : [];
         this.setState({
             selfArray: ary
         });
-        console.log(ary);
+        // console.log(ary);
+    }
+
+    renderOpt() {
+        // const content = this.state.selfArray.length ? this.state.selfArray.map(())
     }
 
     render() {
