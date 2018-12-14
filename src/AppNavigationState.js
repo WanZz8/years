@@ -48,7 +48,7 @@ class AppNavigationState extends Component {
 
     componentWillMount() {
         if (Platform.OS === 'android') {
-            Splash.hide();
+            // Splash.hide();
         }
     }
 
@@ -59,6 +59,7 @@ class AppNavigationState extends Component {
         this.props.MainStore.getData();
         this.props.CacheStore.init();
         if (Platform.OS === 'android') {
+            Splash && Splash.hide();
             BackHandler.addEventListener('hardwareBackPress', this.onBackAndroid);
         }
     }

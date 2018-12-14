@@ -1,6 +1,13 @@
 <resources>
-    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey">pSRnX5NfTHT948v4kSoEcJMLoS0yHkqh8gxRQ</string>
-    <string name="app_name">东方期货投资宝</string>
+    <string moduleConfig="true" name="reactNativeCodePush_androidDeploymentKey"></string>
+    <string name="app_name">旭日期货</string>
+    <string name="version">1.0.0</string>
+    <string name="code_push">FGgxC4soCmSZk8zSqNpA8VD1wqj1Hy78ZEHJN</string>
+    <string name="rnum_appkey">5bf6442bb465f5b3c1000032</string>
+    <string name="rnum_channel">baidu</string>
+    <string name="jpush_appkey">d873eb64832b9f8481172c3b</string>
+    <string name="jpush_channel">baidu</string>
+    <!--<string name="title_activity_splash">SplashActivity</string>-->
     <string name="appCenterAnalytics_whenToEnableAnalytics" moduleConfig="true">ENABLE_IN_JS</string>
     <string name="appCenterCrashes_whenToSendCrashes" moduleConfig="true">ASK_JAVASCRIPT</string>
 </resources>
