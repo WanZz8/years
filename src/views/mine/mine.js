@@ -62,6 +62,7 @@ class Mine extends Component {
                 show: data,
             });
         });
+        console.log(`销毁${4}`);
     }
 
 

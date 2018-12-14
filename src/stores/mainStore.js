@@ -61,6 +61,7 @@ class MainStore {
 
     @observable interval = 2000;
 
+
     constructor() {
         this.quoteList = [];
         // const data = {

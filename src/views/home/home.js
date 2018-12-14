@@ -69,10 +69,11 @@ class HomePage extends Component {
             this.setState({ swiperShow: true });
         }, 0);
         this.getNewsInfo(0);
+        console.log(`销毁${1}`);
     }
 
     componentWillUnmount() {
-        console.log('销毁');
+        // console.log('销毁');
         // if (Platform.OS === 'android') {
         //     BackHandler.removeEventListener('hardwareBackPress', this.onBackAndroid);
         // }

@@ -70,6 +70,7 @@ class TradePage extends Component {
                 show: data,
             });
         });
+        console.log(`销毁${2}`);
     }
 
     componentWillReceiveProps(nextProps) {

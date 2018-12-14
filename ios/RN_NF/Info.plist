@@ -5,7 +5,7 @@
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
-	<string>期货理财助手-原油投资宝典</string>
+	<string>锦鲤期货</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
 	<key>CFBundleIdentifier</key>
@@ -17,11 +17,11 @@
 	<key>CFBundlePackageType</key>
 	<string>APPL</string>
 	<key>CFBundleShortVersionString</key>
-	<string>2.0.0</string>
+	<string>1.0.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
 	<key>CFBundleVersion</key>
-	<string>189999</string>
+	<string>181217</string>
 	<key>CodePushDeploymentKey</key>
 	<string>dI9__exh6iNzsrIr_M4vrIe4SF38ry-YpUevS7</string>
 	<key>LSRequiresIPhoneOS</key>

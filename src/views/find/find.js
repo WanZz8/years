@@ -86,6 +86,7 @@ class Find extends Component {
 
     componentDidMount() {
         this.props.NoticeStore.getNoticeContent();
+        console.log(`销毁${3}`);
     }
 
     handleSwitch(key) {
