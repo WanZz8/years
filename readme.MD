@@ -1,6 +1,6 @@
 
 
-![Main](./screenshot/Main.png)
+![Main](./screenshot/Main_meitu.png)
 ![Trade](./screenshot/trade.png)
 ![Notice](./screenshot/notice.png)
 ![Mine](./screenshot/Mine.png)
