@@ -1,9 +1,11 @@
 > No Profit, No Advertisement, Only Feelings
 ## Screenshot
 ![Main](./screenshot/Main_meitu.png)
+![Home](./screenshot/home.png)
 ![Trade](./screenshot/trade.png)
 ![Notice](./screenshot/notice.png)
 ![Mine](./screenshot/Mine.png)
+![news](./screenshot/news.png)
 
 # 库文件
 ### 安装react-native  
