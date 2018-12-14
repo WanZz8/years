@@ -80,7 +80,7 @@ class Mine extends Component {
 
     render() {
         let that = this;
-        console.log(this.props.CacheStore.isLogin);
+
         return (
             <SafeAreaView style={MineStyles.root} color="#F8F7F4">
                 <ScrollView contentContainerStyle={{
@@ -594,7 +594,7 @@ const MineStyles = StyleSheet.create({
     },
     swiperContainer: {
         width,
-        height: 155,
+        height: 165,
     },
     viewImg: {
         height: 140,
