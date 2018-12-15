@@ -11,7 +11,7 @@ public class SplashScreen {
     private static Dialog mSplashDialog;
     private static WeakReference<Activity> mActivity;
 
-    /**
+    /**∫
      * 打开启动屏
      */
     public static void show(final Activity activity, final int themeResId) {
